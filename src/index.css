@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Rubik+Beastly&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Roboto:wght@100&family=Rubik+Beastly&display=swap');
 
 *{
 	padding: 0;
@@ -7,7 +7,7 @@
 }
 
 body{
-	font-family: 'Rubik Beastly', cursive;
+	font-family: 'Mochiy Pop P One', sans-serif;
 }
 
 .app {
@@ -23,4 +23,16 @@ body{
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+ul {
+  list-style: none;
+  width: 50%;
+}
+
+.tasks-item {
+  border: 1px solid #d3d3d30f;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 5px;
 }
