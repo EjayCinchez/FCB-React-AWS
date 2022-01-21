@@ -1,0 +1,37 @@
+[1mdiff --git a/src/index.js b/src/index.js[m
+[1mindex 9d32288..74c7542 100644[m
+[1m--- a/src/index.js[m
+[1m+++ b/src/index.js[m
+[36m@@ -10,17 +10,21 @@[m [mfunction Task(props){[m
+ }[m
+ [m
+ function TasksList(){[m
+[32m+[m	[32mconst taskItemList = [[m
+[32m+[m		[32m"Follow Edukasyon.ph on Facebook.",[m
+[32m+[m		[32m"Follow AWS Siklab Pilipinas on Facebook.",[m
+[32m+[m		[32m"Follow Zuitt Coding Bootcamp on Facebook."[m
+[32m+[m	[32m];[m
+ 	return ([m
+ 		<ul>[m
+[31m-			<Task taskName="Follow Edukasyon.ph on Facebook."/>[m
+[31m-			<Task taskName="Follow AWS Siklab Pilipinas on Facebook."/>[m
+[31m-			<Task taskName="Follow Zuitt Coding Bootcamp on Facebook."/>[m
+[32m+[m			[32m{taskItemList.map((task, index) => {[m
+[32m+[m				[32mreturn <Task key={index} taskName={task}/>[m
+[32m+[m			[32m})}[m
+ 		</ul>[m
+ 	);[m
+ }[m
+ [m
+ function App(){[m
+[31m-	[m
+ 	const paraStyle = {[m
+ 		"marginBottom": "15px"[m
+ 	};[m
+[36m@@ -35,4 +39,4 @@[m [mfunction App(){[m
+ 	);[m
+ }[m
+ [m
+[31m-ReactDOM.render(<App/>, document.getElementById("root"));[m
+\ No newline at end of file[m
+[32m+[m[32mReactDOM.render(<App/>, document.getElementById("root"));[m
