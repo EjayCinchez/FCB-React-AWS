@@ -11,7 +11,7 @@ function App(){
 	return (
 	<div className="app">
 		<header className="app-header">
-			<h1>My Amazing ToDo-List App</h1>
+			<h1>EjayCinchez - My Amazing ToDo-List App</h1>
 			<p style={paraStyle}>The most simple and amazing todo-list React app.</p>
 			<TasksList/>
 		</header>
