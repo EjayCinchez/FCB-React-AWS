@@ -5,7 +5,8 @@ import TasksList from "./components/TasksList"
 
 function App(){
 	const paraStyle = {
-		"marginBottom": "15px"
+		"marginBottom": "15px",
+		"color": "orange"
 	};
 	return (
 	<div className="app">
