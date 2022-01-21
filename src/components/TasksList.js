@@ -1,18 +1,22 @@
-import {useState} from "react";
+import { useState } from "react";
 import Task from "./Task";
 
 function TasksList(){
-	const taskItemList = [
+	const [taskItemList, setTaskItemList] = useState([
 		"Follow Edukasyon.ph on Facebook.",
 		"Follow AWS Siklab Pilipinas on Facebook.",
 		"Follow Zuitt Coding Bootcamp on Facebook."
-	];
+	]);
 
-  const [taskValue, setTaskValue] = useState("Just another task");
-  console.log("task value :", taskValue);
+  const [taskValue, setTaskValue] = useState("");
 
   const inputChangeHandler = (e) => {
     setTaskValue(e.target.value)
+  };
+
+  const addTaskHandler = () => {
+    setTaskItemList([taskValue, ...taskItemList]);
+    setTaskValue("");
   };
 
 	return (
@@ -21,6 +25,8 @@ function TasksList(){
         className="task-input"
         placeholder="Create a new task"
         onChange={inputChangeHandler}
+        onBlur={addTaskHandler}
+        value={taskValue}
         />
 			<ul>
 				{taskItemList.map((task, index) => {
